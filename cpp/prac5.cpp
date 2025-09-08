@@ -2,12 +2,12 @@
 #include <iostream>
 #include <ostream>
 
-std::ostream& operator<<(std::ostream& out, 
-        std::vector<int> vec) {
-    for (auto element : vec)
-        out << *element << ' ';
-    out << endl;
-    return out;
+template<typename Tp>
+std::istream &operator>>(std::istream& in,
+        std::vector<Tp>& vec) {
+    for (auto& element : vec)
+        in >> element;
+    return in;
 }
 
 int main(void) {
