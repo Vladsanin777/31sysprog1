@@ -3,15 +3,16 @@
 #include <ostream>
 
 template<typename Tp>
-std::istream &operator>>(std::istream& in,
-        std::vector<Tp>& vec) {
-    for (auto& element : vec)
-        in >> element;
-    return in;
+std::ostream &operator<<(std::ostream& out,
+        const std::vector<Tp> &vec) {
+    for (const auto& element : vec)
+        out << element << ' ';
+    out << std::endl;
+    return out;
 }
 
 int main(void) {
     std::vector<int> vec{5, 1}, vec2{vec};
-    std::cout << vec << endl << vec2 << endl;
+    std::cout << vec << std::endl << vec2 << std::endl;
     return 0;
 }

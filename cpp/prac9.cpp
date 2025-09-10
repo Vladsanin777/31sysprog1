@@ -10,6 +10,7 @@ namespace std {
 }
 
 int main(void) {
+    int number;
     std::cin >> number;
     std::cout << std::factorial(number);
     return 0;

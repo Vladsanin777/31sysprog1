@@ -12,7 +12,7 @@ const std::vector<int> durations_ms = {100, 100, 100, 100, 100, 100, 100, 200};
 
 // State for the audio generation
 struct AudioData {
-    int current_note_index = 0;
+    long unsigned int current_note_index = 0;
     Uint32 current_note_samples_left = 0;
     double current_phase = 0.0;
 };

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <istream>
+#include <vector>
 
 template<typename Tp>
 std::istream &operator>>(std::istream& in,
@@ -10,6 +11,7 @@ std::istream &operator>>(std::istream& in,
 }
 
 namespace std {
+    template<typename Tp>
     int sum(std::vector<Tp> vec) {
         int sum{0};
         for (auto &element : vec)
@@ -19,7 +21,7 @@ namespace std {
 }
 
 int main(void) {
-    size_t size;
+    int size;
     std::cin >> size;
     std::vector<int> vec{size};
     std::cin >> vec;

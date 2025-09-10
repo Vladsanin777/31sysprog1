@@ -1,5 +1,7 @@
 #include <vector>
-#include <alghorithm>
+#include <algorithm>
+#include <iostream>
+#include <istream>
 
 template<typename Tp>
 std::istream &operator>>(std::istream& in,
@@ -14,6 +16,6 @@ int main(void) {
     std::cin >> size;
     std::vector<int> vec{size};
     std::cin >> vec;
-    std::cout << std::max(itBegin, itEnd) << std::endl;
+    std::cout << *std::max_element(vec.begin(), vec.end()) << std::endl;
     return 0;
 }

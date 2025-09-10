@@ -1,7 +1,8 @@
 #include <iostream>
-#include <alghorithm>
+#include <algorithm>
 #include <istream>
 #include <ostream>
+#include <vector>
 
 template<typename Tp>
 std::istream &operator>>(std::istream& in,

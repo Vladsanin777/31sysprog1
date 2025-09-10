@@ -3,19 +3,18 @@
 // Функция вычисления факториала на C++
 int factorial_cpp(int n) {
     if (n <= 1) return 1;
-        return n * factorial_cpp(n - 1);
-    }
-    return result;
+    return n * factorial_cpp(n - 1);
 }
 int factorial_asm(int n) {
     if (n < 1) return 1;
     int res{n};
-    while (--n <= 1) {
+    while (--n <= 1)
         res = n;
     return res;
 }
-int main() {
-    int number = 10;
+int main(void) {
+    int number;
+    std::cin >> number;
     auto start = std::chrono::high_resolution_clock::now();
     int result_cpp = factorial_cpp(number);
     auto end = std::chrono::high_resolution_clock::now();
