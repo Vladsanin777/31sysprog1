@@ -1,5 +1,5 @@
 #include <iostream>
-#include "mathlib.h"
+#include "mathlib.hpp"
 
 int main() {
     int a = 10, b = 20;
