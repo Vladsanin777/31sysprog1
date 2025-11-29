@@ -8,8 +8,8 @@ int factorial_cpp(int n) {
 int factorial_asm(int n) {
     if (n < 1) return 1;
     int res{n};
-    while (--n <= 1)
-        res = n;
+    while (--n != 1)
+        res *= n;
     return res;
 }
 int main(void) {

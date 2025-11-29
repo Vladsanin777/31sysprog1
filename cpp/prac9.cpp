@@ -3,8 +3,9 @@
 namespace std {
     long long int factorial(int number) {
         long long int result {1};
+        int res {1};
         while (number--)
-            result += result + 1;
+            result *= res++;
         return result;
     }
 }
@@ -12,6 +13,7 @@ namespace std {
 int main(void) {
     int number;
     std::cin >> number;
-    std::cout << std::factorial(number);
+    std::cout << std::factorial(number) << std::endl;
     return 0;
 }
+

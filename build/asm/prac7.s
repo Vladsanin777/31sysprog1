@@ -264,6 +264,8 @@ main:
 	call	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l@PLT
 	leaq	_ZSt4cout(%rip), %rdi
 	call	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@PLT
+	leaq	_ZSt4cout(%rip), %rdi
+	call	_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_@PLT
 	movq	%rbx, %rdi
 	movl	$4, %esi
 	call	_ZdlPvm@PLT

@@ -27,7 +27,7 @@ int main(void) {
     std::vector<int> vec{size};
     std::cin >> vec;
     std::sort(vec.begin(), vec.end());
-    std::cout << vec;
+    std::cout << vec << std::endl;
     return 0;
 }
 

@@ -9,13 +9,13 @@ _Z13factorial_cppi:
 _Z13factorial_asmi:
 	movl	$1, %eax
 	testl	%edi, %edi
-	jle	.L7
-	movl	$-2147483648, %eax
-	xorl	%edx, %edx
-	subl	%edi, %eax
-	cmpl	$2, %edi
-	cmovg	%edx, %eax
-	addl	%edi, %eax
+	jle	.L6
+	movl	%edi, %eax
+	decl	%edi
+	cmpl	$1, %edi
+	je	.L6
+	imull	%edi, %eax
+	jmp	.L8
 	ret
 main:
 	pushq	%r13
